@@ -1,7 +1,7 @@
 # CircularProgressBar
 
 
-<img src="/images/progress_bar.png" width="312" height="312">
+<img src="/images/progress_bar.png" width="360" height="329">
 
 ![Min Android Sdk](https://img.shields.io/badge/minSdkVersion-16-FF4081.svg)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.st235/circularprogressbar.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.st235%22%20AND%20a:%circularprogressbar%22)
