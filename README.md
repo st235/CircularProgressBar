@@ -1,12 +1,42 @@
 # CircularProgressBar
 
-![CircularProgressBar](./images/progress_bar.png)
+
+<img src="/images/progress_bar.png" width="312" height="312">
 
 ![Min Android Sdk](https://img.shields.io/badge/minSdkVersion-16-FF4081.svg)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.st235/circularprogressbar.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.st235%22%20AND%20a:%circularprogressbar%22)
 
 Like usual [Android ProgressBar](https://developer.android.com/reference/android/widget/ProgressBar) 
 but circular ↻
+
+## Download
+
+- Maven
+
+```text
+<dependency>
+  <groupId>com.github.st235</groupId>
+  <artifactId>circularprogressbar</artifactId>
+  <version>X.X</version>
+  <type>pom</type>
+</dependency>
+```
+
+- Gradle
+
+```text
+implementation 'com.github.st235:circularprogressbar:X.X'
+```
+
+- Ivy
+
+```text
+<dependency org='com.github.st235' name='circularprogressbar' rev='X.X'>
+  <artifact name='circularprogressbar' ext='pom' ></artifact>
+</dependency>
+```
+
+P.S.: Check out latest version code in badge at the top of this page.
 
 ## Usage
 
