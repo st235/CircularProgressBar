@@ -8,8 +8,11 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.FloatRange
+import androidx.annotation.IntegerRes
 import androidx.annotation.Px
+import androidx.core.content.ContextCompat
 import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.sin
@@ -33,14 +36,14 @@ class CircularProgressBar @JvmOverloads constructor(
     private val progressArcOval = RectF()
 
     @ColorInt
-    private var backgroundProgressColor: Int = Color.BLACK
-        set(newValue) {
+    var backgroundProgressColor: Int = Color.BLACK
+        private set(newValue) {
             field = newValue
             invalidate()
         }
 
     @ColorInt
-    private var foregroundProgressColor: Int = Color.GRAY
+    var foregroundProgressColor: Int = Color.GRAY
         set(newValue) {
             field = newValue
             invalidate()
@@ -60,7 +63,7 @@ class CircularProgressBar @JvmOverloads constructor(
         }
 
     @FloatRange(from = 0.0, to = 1.0)
-    public var progress: Float = 0F
+    var progress: Float = 0F
         set(newValue) {
             if (newValue < 0 || newValue > 1) {
                 throw IllegalArgumentException("$newValue is outside of valid range [0, 1]")
@@ -89,6 +92,14 @@ class CircularProgressBar @JvmOverloads constructor(
         progress = typedArray.getFloat(R.styleable.CircularProgressBar_cpb_progress, 0F)
 
         typedArray.recycle()
+    }
+
+    fun setBackgroundProgressColorRes(@ColorRes colorRes: Int) {
+        backgroundProgressColor = ContextCompat.getColor(context, colorRes)
+    }
+
+    fun setForegroundProgressColorRes(@ColorRes colorRes: Int) {
+        foregroundProgressColor = ContextCompat.getColor(context, colorRes)
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
